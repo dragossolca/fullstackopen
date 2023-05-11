@@ -1,9 +1,9 @@
 import Person from './Person'
 
-const Persons = (props) => {
+const Persons = ({filteredPersons}) => {
     return (
         <>   
-          {props.filteredPersons.map(person => 
+          {filteredPersons.map(person => 
             <Person key={person.id} person={person} />
           )}
         </>

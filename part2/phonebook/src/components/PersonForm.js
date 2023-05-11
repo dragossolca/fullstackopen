@@ -1,11 +1,13 @@
-const PersonForm = (props) => {
+const PersonForm = ({submitFunction, fields}) => {
+    console.log(fields)
+    
     return (
-        <form onSubmit={props.submitFunction}>
+        <form onSubmit={submitFunction}>
             <div>
-                name: <input value={props.fields[0].name} onChange={props.fields[0].onChange} />
+                name: <input value={fields[0].value.newName} onChange={fields[0].onChange.handleNameChange} />
             </div>
             <div>
-                number: <input value={props.fields[1].name} onChange={props.fields[1].onChange} />
+                number: <input value={fields[1].value.newNumber} onChange={fields[1].onChange.handleNumberChange} />
             </div>
             <div>
                 <button type="submit">add</button>
