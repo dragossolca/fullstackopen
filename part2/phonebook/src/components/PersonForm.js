@@ -1,6 +1,4 @@
 const PersonForm = ({submitFunction, fields}) => {
-    console.log(fields)
-    
     return (
         <form onSubmit={submitFunction}>
             <div>
